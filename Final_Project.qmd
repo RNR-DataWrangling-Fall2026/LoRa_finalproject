@@ -4,23 +4,46 @@ format: html
 editor: visual
 ---
 
-## Quarto
+##### Final Project
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+## N2O emissions from a gas flux chamber in a corn field
 
-## Running Code
+**Background**
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+In agriculture, most of the N applied as ammonium fertilizer is lost through leaching, or emitted as greenhouse gas. Microbial Nitrification utilizes the available Nitrogen and converts it to N2O gas; competing with plants like Maize for the same nutrients. Biologican Nitrification Inhibition (BNI) is a lost chemical communication shown to decrease the conversion of this gas in Teosinte, a wild relative of Maize. My works analyses the application of commercially available chemicas identified from exudates shown to have BNI phenotypes as N2O gas emission in a Field of Corn. There are three chemical treatments in two Field conditions (low and high N).
 
-```{r}
-1 + 1
-```
+A Static Flux Chamber was used to analyze ciontinuous N2O emissions during 1 hour weekly. The concentration of the was obtained based on the peaks obtained from Gas Chromatography.
 
-You can add options to executable code like this
+The relationship between the concentration of the gas and the sampling time (showed as the slope of T0-T3) is attached in "Raw_Data" folder. For most except for one data set, there is one .cvs file for each day.
 
-```{r}
-#| echo: false
-2 * 2
-```
+**Objective:**
 
-The `echo: false` option disables the printing of code (only output is displayed).
+calculate the flux (mg N m⁻² h⁻¹) of N2O emissions, and plot in in a line graph across 5 days. (Week 5)
+
+Currently in the processing of Raw Data from GC raw file peaks.
+
+*Note: this means I already manually eliminated some data based on the visual appearence of the peaks obtained from the GC*
+
+a\) For the ID, I need to separate the name of the plot and the date.
+
+b)Locate the type of treatment for each plot (from the number, I have a list to match the type of treatment used). (Week 4)
+
+c\) Calculate flux during 5 days: Following the protocol:"Greenhouse Gas Fluxes - Static Chamber Method"(Michigan University, 2008). I obtained the following equation that I test it in excel:
+
+*((SLOPE)(28)(15))/((0.0821)(37.7+273)(0.0755))\*60/1000*
+
+(Week 11: Functions)
+
+**What I did before:**
+
+I have noticed that I could also include some of the code I previosuly wrote(in ppm/"Previous_work.R"). I have to say that I could not have done any of this without this course, it has been very helpful!
+
+"Previous_work" calculates the concentration (ppm) from the peaks from the GC (area measured) and solves it depending on the type of gas measured (based on its Retention Time), there could be 3 gases, and initially I was calculating for all of them, but the biologicall important one for my research question is N2O. I could modify that part of the code and make it work. I have attached it as an example, however it contains a very simple input form of data, I could also change that.
+
+In the future work, I would also like to join and simplify my codes into one file using pipes.
+
+**References**
+
+Michigan University, 2008, <https://lter.kbs.msu.edu/protocols/113>
+
+Alonso Favela et al. ,Lost and found: Rediscovering microbiome-associated phenotypes that reshape agricultural sustainability.Sci. Adv.12,eaed3360(2026).DOI:10.1126/sciadv.aed3360
